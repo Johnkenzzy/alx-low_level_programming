@@ -1,15 +1,9 @@
 #include <stdio.h>
 
-/**
-* A program that uses the puts function to print text
-*
-* main - function is the enpoint
-*
-* printf -  function prints the character string on the screen
-*
-* return: value is set at zero (success)
-*/
-int main(void)
+/*A program that prints the size of various types on the computer*/
+
+/*
+ * main function - the entry point starts and ends the program*/int main(void)
 {
 	/*prints the various sizes of the types in bytes*/
 	printf("Size of a char: %zu byte(s)\n", sizeof(char));
