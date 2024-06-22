@@ -8,7 +8,7 @@
 {
 	char alph = 'z';
 	/* loops the english lowercase alphabet in reverse */
-	while (alph <= 'a')
+	while (alph >= 'a')
 	{
 		putchar(alph);
 		alph--;
