@@ -4,10 +4,10 @@
 
 /*
  * Output texts on screen
- * main - function is the enpoint*/int main(void)
+ * main - function is the enpoint
+ * return: value is set at zero (success)*/int main(void)
 {
 	/*puts -  function prints the character string on the screen*/
 	puts("\"Programming is like building a multilingual puzzle\n");
-	/*return: value is set at zero (success)*/
 	return (0);
 }
