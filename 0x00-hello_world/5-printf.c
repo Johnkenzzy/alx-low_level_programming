@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* A program that uses the puts function to print text */
+/* A program that uses the printf function to print text */
 
 /**
  * main - function is the enpoint
@@ -9,7 +9,9 @@
  *
  * return: value is set at zero (success)
  */int main(void)
-{
-	printf("with proper grammar, but the outcome is a piece of art,");
+{	char txt;
+
+	txt = "with proper grammar, but the outcome is a piece of art,\n"
+	printf("%s", txt);
 	return (0);
 }
