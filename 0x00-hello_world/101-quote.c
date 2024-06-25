@@ -1,11 +1,12 @@
 #include <unistd.h>
 
-/*A program that prints text without printf or puts, but write function*/
+/*Prints text without printf or puts, but write function*/
 
 /**
  * main - function is the enpoint
  *
- * set to print text with write()*/int main(void)
+ * return: value is set to one (error)
+ * set to print text with write() */int main(void)
 {
 	/*initialized message with the string value*/
 	const char message1[] = "and that piece of art is useful\" - Dora Korpar, ";
