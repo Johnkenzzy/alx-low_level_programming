@@ -1,8 +1,6 @@
 /* A program that prints lowercase alphabet using user-defined header */
 #include "main.h"
 
-void print_alphabet(void);
-
 /**
  * print_alphabet - prints lowercase alphabet  when called
  *
@@ -17,15 +15,4 @@ void print_alphabet(void);
 		a++;
 	}
 	_putchar('\n');
-}
-
-/*
- * main function - entry point
- *
- * calls the print alphabet function
- * returns 0 (success)
- */int main(void)
-{
-	print_alphabet();
-	return (0);
 }
