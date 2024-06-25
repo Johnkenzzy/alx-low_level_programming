@@ -8,10 +8,8 @@
  * printf -  function prints the character string on the screen
  *
  * return: value is set at zero (success)
- */int main(void)
-{	char txt;
-
-	txt = "with proper grammar, but the outcome is a piece of art,\n"
-	printf("%s", txt);
+ * return value is (0) */int main(void)
+{
+	printf("with proper grammar, but the outcome is a piece of art,\n");
 	return (0);
 }
