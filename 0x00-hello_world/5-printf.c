@@ -10,6 +10,7 @@
  * return: value is set at zero (success)
  * return value is (0) */int main(void)
 {
+	/* prints the exact text ont the output screen */
 	printf("with proper grammar, but the outcome is a piece of art,\n");
 	return (0);
 }
