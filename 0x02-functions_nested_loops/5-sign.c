@@ -25,5 +25,5 @@
 		_putchar('-');
 		return (-1);
 	}
-
+	return (0);
 }
