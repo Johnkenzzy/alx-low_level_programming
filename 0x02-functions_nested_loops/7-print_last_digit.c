@@ -1,5 +1,6 @@
 /* A function that prints the last digit of a number */
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 	/**
@@ -13,7 +14,7 @@
 
 	if (i < 0)
 	{
-		ld = _abs(i % 10);
+		ld = abs(i % 10);
 		_putchar('0' + ld);
 	}
 	else
