@@ -10,7 +10,7 @@
 {
 	int result;
 
-	result= a + b;
+	result = a + b;
 	_putchar('0' + result);
 	return (result);
 }
