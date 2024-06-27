@@ -11,6 +11,5 @@
 	int result;
 
 	result = a + b;
-	_putchar('0' + result);
 	return (result);
 }
