@@ -12,16 +12,13 @@
 	char A = 'A';
 	char Z = 'Z';
 
-	for (; A <= Z; A++)
+	if (c >= A && c <= Z)
 	{
-		if (c == A)
-		{
-			return (1);
-		}
-		else
-		{
-			return (0);
-		}
+		return (1);
+	}
+	else
+	{
+		return (0);
 	}
 	return (0);
 }
