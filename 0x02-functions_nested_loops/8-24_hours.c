@@ -2,12 +2,12 @@
 /* A function that prints every minute of the day */
 
 	/**
-	 * jack_bauer - function prints every minute in a day
-	 *
-	 * takes no parameter
-	 *
-	 * return nothing
-	 */void jach_bauer(void)
+	* jack_bauer - function prints every minute in a day
+	*
+	* takes no parameter
+	*
+	* return nothing
+	*/void jack_bauer(void)
 {
 	int min;
 	int hr;
