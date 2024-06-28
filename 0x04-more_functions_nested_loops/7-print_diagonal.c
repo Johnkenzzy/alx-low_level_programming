@@ -12,20 +12,19 @@
 	int i;
 	int sp;
 
+	if (n <= 0)
+	{
+		_putchar('\n');
+		return;
+	}
+
 	i = 0;
 	while (i < n)
 	{
 		sp = 0;
 		while (sp < i)
 		{
-			if (n <= 0)
-			{
-				_putchar('\n');
-			}
-			else
-			{
-				_putchar(' ');
-			}
+			_putchar(' ');
 			sp++;
 		}
 		_putchar('\\');
