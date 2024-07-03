@@ -26,17 +26,11 @@
 	int i;
 
 	length = _strlen(s);
-	i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	while (length >= 0)
+	i = length - 1;
+	while (i >= 0)
 	{
 		_putchar(s[i]);
 		i--;
-		length--;
 	}
 	_putchar('\n');
 }
