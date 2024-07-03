@@ -33,7 +33,7 @@
 
 	srand(time(NULL));
 	generate_password(password, password_length);
-	printf("Generate Password: %s\n", password);
+	printf("%s\n", password);
 
 	return (0);
 }
