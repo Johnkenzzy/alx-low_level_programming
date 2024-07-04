@@ -8,17 +8,19 @@
 	* Return: a pointer to string
 	*/char *_strcat(char *dest, char *src)
 {
-	while (*dest != '\0')
+	char *temp = dest;
+
+	while (*temp != '\0')
 	{
-		dest++;
+		temp++;
 	}
 	while (*src != '\0')
 	{
-		*dest = *src;
-		dest++;
+		*temp = *src;
+		temp++;
 		src++;
 	}
-	*dest = '\0';
+	*temp = '\0';
 
 	return (dest);
 }
