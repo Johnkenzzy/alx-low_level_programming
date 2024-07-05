@@ -13,7 +13,7 @@
 
 	while (n-- > 0 && (*dest++ = *src++))
 	{
-	
+
 	}
 	while (n-- > 0)
 	{
