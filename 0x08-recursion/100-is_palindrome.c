@@ -1,3 +1,5 @@
+#include "main.h"
+
 int _is_palindrome_helper(char *s, int start, int end);
 
 	/**
@@ -6,7 +8,7 @@ int _is_palindrome_helper(char *s, int start, int end);
 	* return: 1 if it is palindrome, 0 if not
 	*/int is_palindrome(char *s)
 {
-	int len = strlen(s);
+	int len = _strlen_recursion(s);
 	
 	if (len == 0)
 	{
@@ -15,7 +17,13 @@ int _is_palindrome_helper(char *s, int start, int end);
 	return (_is_palindrome_helper(s, 0, len - 1));
 }
 
-int _is_palindrome_helper(char *s, int start, int end)
+	/**
+	* _is_palindrome_helper - checks if substring is palindrome
+	* @*s: string
+	* @start: where check starts
+	* @end: end of checks
+	* return: 1 if substring is palindrome
+	*/int _is_palindrome_helper(char *s, int start, int end)
 {
 	if (start >= end)
 	{
@@ -25,4 +33,5 @@ int _is_palindrome_helper(char *s, int start, int end)
 	{
 		return (0);
 	}
+	return (_is_palindrome_helper(s, start + 1, end - 1));
 }
