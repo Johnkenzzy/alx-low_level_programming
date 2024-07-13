@@ -16,7 +16,7 @@
 	if (count < 2)
 	{
 		printf("0\n");
-		return (0);
+		return (1);
 	}
 	for (i = 1; i < count; i++)
 	{
