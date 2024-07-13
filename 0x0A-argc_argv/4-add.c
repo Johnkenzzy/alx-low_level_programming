@@ -13,7 +13,7 @@
 	int result;
 
 	result = 0;
-	if (count < 2)
+	if (count == 1)
 	{
 		printf("0\n");
 		return (0);
