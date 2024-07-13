@@ -16,18 +16,18 @@
 	if (count < 2)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 	for (i = 1; i < count; i++)
 	{
-		if (isdigit(*arg_arr[i]))
-		{
-			result += atoi(arg_arr[i]);
-		}
-		else
+		if (!isdigit(*arg_arr[i]))
 		{
 			printf("Error\n");
 			return (1);
+		}
+		else
+		{
+			result += atoi(arg_arr[i]);
 		}
 	}
 	printf("%d\n", result);
