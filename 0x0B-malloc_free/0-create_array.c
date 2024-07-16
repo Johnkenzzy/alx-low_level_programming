@@ -22,7 +22,7 @@
 	{
 		array_ptr = malloc(sizeof(char) * size);
 	}
-	for (i = i; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		array_ptr[i] = c;
 	}
