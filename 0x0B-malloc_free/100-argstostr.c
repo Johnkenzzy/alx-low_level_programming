@@ -27,6 +27,7 @@
 		}
 		len++;
 	}
+	len++;
 
 	str = malloc(sizeof(char) * len);
 	if (str == NULL)
