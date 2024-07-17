@@ -31,6 +31,10 @@
 
 		if (two_dim_arr[i] == NULL)
 		{
+			for (j = 0; j < i; j++)
+			{
+				free(two_dim_arr[j]);
+			}
 			free(two_dim_arr);
 			return (NULL);
 		}
