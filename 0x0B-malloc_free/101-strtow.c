@@ -24,7 +24,7 @@
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
+		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 		{
 			word_count++;
 		}
@@ -35,8 +35,8 @@
 		return (NULL);
 	}
 
-	words = malloc((word_count + 1) * sizeof(char *));
-	if (word == NULL)
+	words = malloc(sizeof(char *) * (word_count + 1));
+	if (words == NULL)
 	{
 		return (NULL);
 	}
@@ -51,7 +51,7 @@
 			{
 				word_length++;
 			}
-			words[j] = malloc((word_length + 1) * sizeof(char));
+			words[j] = malloc(sizeof(char) * (word_length + 1));
 			if (words[j] == NULL)
 			{
 				for (k = 0; k < j; k++)
@@ -62,11 +62,12 @@
 				return (NULL);
 			}
 			strncpy(words[j], &str[i], word_length);
-			 words[j][word_length] = '\0';
-			 i += word_length - 1;
+			words[j][word_length] = '\0';
+			j++;
+			i += word_length - 1;
 		}
 
 	}
 	words[j] = NULL;
-	return (NULL);
+	return (words);
 }
