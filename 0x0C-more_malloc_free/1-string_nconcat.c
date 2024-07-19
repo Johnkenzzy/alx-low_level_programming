@@ -32,7 +32,7 @@
 	len = j;
 	for (i = 0; s2[i] != s2[n];)
 	{
-		if (n == i)
+		if (n >= i)
 		{
 			n = i;
 		}
