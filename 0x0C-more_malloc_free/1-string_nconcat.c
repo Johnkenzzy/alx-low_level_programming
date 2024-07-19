@@ -57,6 +57,7 @@
 		new_str[i] = s2[k];
 		k++;
 	}
+	new_str[i] = '\0';
 
 	return (new_str);
 }
