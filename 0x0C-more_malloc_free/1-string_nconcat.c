@@ -30,7 +30,7 @@
 		j++;
 	}
 	len = j;
-	for (i = 0; s2[i] != s2[n]; i++)
+	for (i = 0; s2[i] != s2[n];)
 	{
 		if (n == i)
 		{
@@ -57,7 +57,6 @@
 		new_str[i] = s2[k];
 		k++;
 	}
-	new_str[i] = '\0';
 
 	return (new_str);
 }
