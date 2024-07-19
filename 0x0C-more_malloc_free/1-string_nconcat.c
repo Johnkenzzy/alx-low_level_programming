@@ -41,7 +41,7 @@
 	len += i;
 	len++;
 
-	new_str = malloc(sizeof(char) * len);
+	new_str = malloc(sizeof(*new_str) * len);
 	if (new_str == NULL)
 	{
 		return (NULL);
@@ -57,7 +57,6 @@
 		new_str[i] = s2[k];
 		k++;
 	}
-	new_str[i] = '\0';
 
 	return (new_str);
 }
