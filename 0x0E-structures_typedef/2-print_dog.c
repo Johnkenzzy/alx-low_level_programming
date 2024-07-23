@@ -29,6 +29,6 @@
 	}
 	else
 	{
-		printf("Owner: %\n", d->owner);
+		printf("Owner: %s\n", d->owner);
 	}
 }
