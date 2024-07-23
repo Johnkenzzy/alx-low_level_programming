@@ -9,5 +9,4 @@
 		free(d->name);
 		free(d->owner);
 		free(d);
-		free(my_dog);
 }
