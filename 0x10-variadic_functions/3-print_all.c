@@ -11,38 +11,36 @@
 	va_list args;
 	int i = 0;
 	char *strg;
-	char curr_fmt;
 
 	va_start(args, format);
 
 	while (format && format[i])
 	{
-		curr_fmt = format[i];
-		if (curr_fmt == 'c' || curr_fmt == 'i' || curr_fmt == 'f' || curr_fmt == 's')
+		switch (format[i])
 		{
-
-			switch (curr_fmt)
-			{
-				case 'c':
-					printf("%c,", va_arg(args, int));
-					break;
-				case 'i':
-					printf("%d,", va_arg(args, int));
-					break;
-				case 'f':
-					printf("%f,", va_arg(args, double));
-					break;
-				case 's':
-					strg = va_arg(args, char *);
-					if (strg == NULL)
-					{
-						strg = "(nil)";
-					}
-					printf("%s,", strg);
-					break;
-			}
+			case 'c':
+				printf("%c", va_arg(args, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(args, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(args, double));
+				break;
+			case 's':
+				strg = va_arg(args, char *);
+				if (strg == NULL)
+				{
+					strg = "(nil)";
+				}
+				printf("%s", strg);
+				break;
 		}
 		i++;
+		if (format[i] && (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
+		{
+			printf(", ");
+		}
 	}
 	printf("\n");
 	va_end(args);
