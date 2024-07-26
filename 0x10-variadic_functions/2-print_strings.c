@@ -20,20 +20,15 @@
 		strg = va_arg(strgs, char *);
 		if (strg == NULL)
 		{
-			strg = "(nil)";
-		}
-		if (separator == NULL)
-		{
-			printf("%s ", strg);
+			printf("(nil)");
 		}
 		else
 		{
-			if (i != n - 1)
-			{
-				printf("%s%s ", strg, separator);	
-			}
-			else
-				printf("%s", strg);
+			printf("%s", strg);
+		}
+		if (separator && i < n - 1)
+		{
+			printf("%s", separator);
 		}
 	}
 	printf("\n");
