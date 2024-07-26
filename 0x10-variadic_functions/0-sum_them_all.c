@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include <stdlib.h>
 
 	/**
 	* sum_them_all - sum up all its paramters
@@ -11,7 +12,7 @@
 	unsigned int i;
 	int sum;
 
-	if (n == 0)
+	if (n == 0 || n == NULL)
 	{
 		return (0);
 	}
