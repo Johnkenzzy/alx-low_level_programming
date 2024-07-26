@@ -9,7 +9,7 @@
 {
 	va_list nums;
 	unsigned int i;
-	unsigned int sum;
+	int sum;
 
 	if (n == 0)
 	{
