@@ -12,7 +12,7 @@
 	unsigned int i;
 	int sum;
 
-	if (n == 0 || n == NULL)
+	if (n == 0)
 	{
 		return (0);
 	}
