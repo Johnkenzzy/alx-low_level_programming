@@ -17,20 +17,13 @@
 	va_start(nums, n);
 	for (i = 0; i < n; i++)
 	{
-		num = va_arg(nums, unsigned int);
-		if (separator == NULL)
+		num = va_arg(nums, int);
+		printf("%d", num);
+		if (separator && i < n - 1)
 		{
-			printf("%d ", num);
+			printf("%s", separator);
 		}
-		else
-		{
-			if (i != n - 1)
-			{
-				printf("%d%s ", num, separator);	
-			}
-			else
-				printf("%d", num);
-		}
+
 	}
 	printf("\n");
 
