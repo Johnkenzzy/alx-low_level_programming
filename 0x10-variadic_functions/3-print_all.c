@@ -20,21 +20,17 @@
 		curr_fmt = format[i];
 		if (curr_fmt == 'c' || curr_fmt == 'i' || curr_fmt == 'f' || curr_fmt == 's')
 		{
-			if (i > 0)
-			{
-				printf(", ");
-			}
 
 			switch (curr_fmt)
 			{
 				case 'c':
-					printf("%c", va_arg(args, int));
+					printf("%c,", va_arg(args, int));
 					break;
 				case 'i':
-					printf("%d", va_arg(args, int));
+					printf("%d,", va_arg(args, int));
 					break;
 				case 'f':
-					printf("%f", va_arg(args, double));
+					printf("%f,", va_arg(args, double));
 					break;
 				case 's':
 					strg = va_arg(args, char *);
@@ -42,7 +38,7 @@
 					{
 						strg = "(nil)";
 					}
-					printf("%s", strg);
+					printf("%s,", strg);
 					break;
 			}
 		}
