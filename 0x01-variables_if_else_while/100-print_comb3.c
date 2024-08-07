@@ -16,9 +16,11 @@
 			putchar(b + '0');
 
 			if (a != 8 && b < 10)
+			{
 				putchar(',');
+				putchar(' ');
+			}
 
-			putchar(' ');
 			b++;
 		}
 		a++;
