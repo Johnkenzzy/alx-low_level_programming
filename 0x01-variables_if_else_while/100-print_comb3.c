@@ -18,7 +18,8 @@
 			putchar(number2 + '0');
 			if (number1 != 8 || number2 != 9)
 			{
-				putchar(', ');
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}

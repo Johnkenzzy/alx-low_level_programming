@@ -18,6 +18,8 @@
 			{
 				/* change integer to corresponding character */
 				putchar(number1 + '0');
+				putchar(number1 + '0');
+				putchar(' ');
 				putchar(number2 + '0');
 				putchar(number3 + '0');
 				if (number1 != 7 || number2 != 8 || number3 != 9)
