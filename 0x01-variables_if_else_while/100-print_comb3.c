@@ -5,24 +5,26 @@
  * prints possible unique combinations
  * starts from zero */int main(void)
 {
-	int number1;
-	int number2;
+	int a = 0;
+	int b = 1;
 
-	/* loop through numbers */
-	for (number1 = 0; number1 < 9; number1++)
+	while (a < 9)
 	{
-		for (number2 = number1 + 1; number2 <= 9; number2++)
+		while (b < 10)
 		{
-			/* change integer to corresponding character */
-			putchar(number1 + '0');
-			putchar(number2 + '0');
-			if (number1 != 8 || number2 != 9)
-			{
+			putchar(a + '0');
+			putchar(b + '0');
+
+			if (a != 8 && b < 10)
 				putchar(',');
-				putchar(' ');
-			}
+
+			putchar(' ');
+			b++;
 		}
+		a++;
+		b = a + 1;
 	}
 	putchar('\n');
+
 	return (0);
 }
