@@ -1,35 +1,65 @@
-#include <stdio.h>
 /* Prints all possible different combinations of three digits */
+#include <stdio.h>
+
+void print_integer(int n);
 
 /*
- * prints possible unique combinations
- * starts from zero */int main(void)
+ * main - prints possible unique combination pairs
+ * starts from zero
+ * return: 0 Always successful */int main(void)
 {
 	int number1;
 	int number2;
-	int number3;
 
 	/* loop through numbers */
-	for (number1 = 0; number1 < 9; number1++)
+	for (number1 = 0; number1 < 100; number1++)
 	{
-		for (number2 = number1 + 1; number2 <= 9; number2++)
+		for (number2 = number1 + 1; number2 < 100; number2++)
 		{
-			for (number3 = number2 + 1; number3 <= 9; number3++)
+			if (number1 < 10)
+				putchar(0 + '0');
+
+			print_integer(number1);
+			putchar(' ');
+
+			if (number2 < 10)
+				putchar(0 + '0');
+
+			print_integer(number2);
+
+			if (number1 != 98 && number2 < 100)
 			{
-				/* change integer to corresponding character */
-				putchar(number1 + '0');
-				putchar(number1 + '0');
+				putchar(',');
 				putchar(' ');
-				putchar(number2 + '0');
-				putchar(number3 + '0');
-				if (number1 != 7 || number2 != 8 || number3 != 9)
-				{
-					putchar(',');
-					putchar(' ');
-				}
 			}
 		}
 	}
 	putchar('\n');
 	return (0);
 }
+
+	/**
+	* print_int - prints an integer
+	* @n: integer argument
+	* return: nothing
+	*/void print_integer(int n)
+{
+
+	if (n == 0)
+	{
+		putchar('0');
+		return;
+	}
+
+	if (n < 0)
+	{
+		putchar('-');
+		n = -n;
+	}
+
+	if (n / 10 != 0)
+		print_integer(n / 10);
+
+	putchar((n % 10) + '0');
+}
+
