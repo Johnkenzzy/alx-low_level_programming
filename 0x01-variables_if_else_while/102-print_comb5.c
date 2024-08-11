@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Prints all possible different combinations of three digits */
+/* Prints all possible different combinations of two two-digit numbers*/
 
 /*
  * prints possible unique combinations
@@ -17,14 +17,20 @@
 		{
 			for (n3 = n1; n3 < 10; n3++)
 			{
-				for (n4 = n2 + 1; n4 < 10; n4++)
+				if (n1 == n3)
+					n4 = n2 + 1;
+				else
+					n4 = 0;
+
+				for (; n4 < 10; n4++)
 				{
 					putchar(n1 + '0');
 					putchar(n2 + '0');
 					putchar(' ');
 					putchar(n3 + '0');
 					putchar(n4 + '0');
-					if (n1 + n2 != 17)
+
+					if (n1 != 9 || n2 != 8 || n3 != 9 || n4 != 9)
 					{
 						putchar(',');
 						putchar(' ');
