@@ -1,17 +1,16 @@
-#include <stdio.h>
+/* A program that prints a text using a user-defined header _putchar */
+
 #include "main.h"
 
-int main(void);
-int _putchar(char c);
-/**
- * main function - starting point
- *
- * prints _putchar when called
- * uses a user defined headerfile
- * with the predefined function _putchar()
- *
- * returns 0: Always successful
- */int main(void)
+	/**
+	* main function - starting point.
+	*
+	* prints _putchar when called.
+	* uses a user defined headerfile.
+	* with the predefined function _putchar().
+	*
+	* returns 0: Always successful.
+	*/int main(void)
 {
 	char ch[] = "_putchar";
 	int i = 0;

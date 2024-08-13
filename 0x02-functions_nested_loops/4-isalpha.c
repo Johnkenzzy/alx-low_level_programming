@@ -1,10 +1,10 @@
-/**
- * _isalpha - checks alphabet characters
- * checks whether c argument is is an alphabetic character
- *
- * returns 1 if alphabet
- * else returns 0
- */int _isalpha(int c)
+	/**
+	* _isalpha - checks alphabet characters
+	* checks whether c argument is is an alphabetic character
+	*
+	* returns 1 if alphabet
+	* else returns 0
+	*/int _isalpha(int c)
 {
 	char a = 'a';
 	char z = 'z';

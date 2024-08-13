@@ -1,10 +1,11 @@
 /* A program that prints lowercase alphabet using user-defined header */
 #include "main.h"
 
-/**
- * print_alphabet - prints lowercase alphabet x10 when called
- *
- * returns nothing*/void print_alphabet_x10(void)
+	/**
+	* print_alphabet - prints lowercase alphabet x10 when called
+	*
+	* returns nothing
+	*/void print_alphabet_x10(void)
 {
 	char a;
 	char z;
