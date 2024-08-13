@@ -2,8 +2,8 @@
 
 	/**
 	* main - sums up the number below 1024, multiple of 3 or 5
-	* return: nothing
-	*/void main(void)
+	* return: 0 Always successful
+	*/int main(void)
 {
 	int i;
 	int mul = 0;
@@ -16,4 +16,5 @@
 		}
 	}
 	printf("%d\n", mul);
+	return (0);
 }
