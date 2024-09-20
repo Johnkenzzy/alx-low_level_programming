@@ -1,44 +1,30 @@
 #include "lists.h"
 
 /**
- * delete_dnodeint_at_index - Deletes a node at a specified index in a doubly
- *                            linked list
+ * add_dnodeint - Adds a new node at the beginning of a doubly linked list
  * @head: Double pointer to the head of the list
- * @index: The index of the node to delete (starting from 0)
+ * @n: Integer data to store in the new node
  *
- * Return: 1 if successful, -1 if failed
+ * Return: Address of the new element (node), or NULL if it failed
  */
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t *temp = *head;
-	unsigned int i;
+	dlistint_t *new_node;
 
-	if (*head == NULL)
-		return (-1);
+	new_node = malloc(sizeof(dlistint_t));
 
-	if (index == 0)
-	{
-		*head = temp->next;
-		if (temp->next != NULL)
-			temp->next->prev = NULL;
-		free(temp);
-		return (1);
-	}
+	if (new_node == NULL)
+		return (NULL);
 
-	for (i = 0; temp != NULL && i < index; i++)
-		temp = temp->next;
+	new_node->n = n;
+	new_node->prev = NULL;
+	new_node->next = *head;
 
-	if (temp == NULL)
-		return (-1);
+	if (*head != NULL)
+		(*head)->prev = new_node;
 
-	if (temp->next != NULL)
-		temp->next->prev = temp->prev;
+	*head = new_node;
 
-	if (temp->prev != NULL)
-		temp->prev->next = temp->next;
-
-	free(temp);
-
-	return (1);
+	return (new_node);
 }
 
