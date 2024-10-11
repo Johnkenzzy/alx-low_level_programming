@@ -1,9 +1,10 @@
-#ifndef __hash_tables__
-#define __hash_tables__
+#ifndef __HASH_TABLES_H__
+#define __HASH_TABLES_H__
 
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * struct hash_node_s - Node of a hash table
@@ -48,4 +49,4 @@ void hash_table_delete(hash_table_t *ht);
 
 
 
-#endif /* __hash_tables__ */
+#endif /* __HASH_TABLES_H__ */
