@@ -55,6 +55,6 @@ void hash_table_delete(hash_table_t *ht);
 /* Helper Functions */
 
 hash_node_t *create_element(const char *key, const char *value);
-
+void free_element(hash_node_t *element);
 
 #endif /* __HASH_TABLES_H__ */

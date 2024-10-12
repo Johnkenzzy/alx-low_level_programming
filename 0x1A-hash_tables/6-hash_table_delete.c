@@ -20,13 +20,25 @@ void hash_table_delete(hash_table_t *ht)
 		while (current_elem != NULL)
 		{
 			temp = current_elem->next;
-			free(current_elem->key);
-			free(current_elem->value);
-			free(current_elem);
+			free_element(current_elem);
 			current_elem = temp;
 		}
 	}
 
 	free(ht->array);
 	free(ht);
+}
+
+
+/**
+ * free_element - free elements of the hash table
+ * @element: element to be freed
+ *
+ * Return: nothing
+ */
+void free_element(hash_node_t *element)
+{
+	free(element->key);
+	free(element->value);
+	free(element);
 }

@@ -24,6 +24,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (element == NULL)
 	{
 		free(value_dup);
+		free_element(element);
 		return (0);
 	}
 	index = key_index((const unsigned char *)key, ht->size);
@@ -35,7 +36,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			free(current_elem->value);
 			current_elem->value = value_dup;
-			free(element);
+			free_element(element);
 			return (1);
 		}
 		current_elem = current_elem->next;
