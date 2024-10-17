@@ -109,11 +109,23 @@ void shash_table_delete(shash_table_t *ht)
 	{
 		temp_elem = element;
 		element = element->snext;
-		free(temp_elem->key);
-		free(temp_elem->value);
-		free(temp_elem);
+		sfree_element(temp_elem);
 	}
 
 	free(ht->array);
 	free(ht);
+}
+
+
+/**
+ * sfree_element - free elements of the sorted hash table
+ * @element: element to be freed
+ *
+ * Return: nothing
+ */
+void sfree_element(shash_node_t *element)
+{
+	free(element->key);
+	free(element->value);
+	free(element);
 }

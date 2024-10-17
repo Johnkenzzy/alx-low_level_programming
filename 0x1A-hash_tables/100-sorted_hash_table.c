@@ -48,7 +48,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	element = screate_element(key, value);
 	if (!element)
 	{
-		free_element(element);
+		sfree_element(element);
 		return (0);
 	}
 	element->next = ht->array[index];
@@ -108,6 +108,7 @@ shash_node_t *screate_element(const char *key, const char *value)
 	if (element->value == NULL)
 	{
 		free(element->key);
+		free(element->value);
 		free(element);
 		return (NULL);
 	}

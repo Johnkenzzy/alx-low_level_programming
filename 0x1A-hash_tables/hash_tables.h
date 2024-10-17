@@ -111,5 +111,6 @@ void shash_table_delete(shash_table_t *ht);
 hash_node_t *create_element(const char *key, const char *value);
 shash_node_t *screate_element(const char *key, const char *value);
 void free_element(hash_node_t *element);
+void sfree_element(shash_node_t *element);
 
 #endif /* __HASH_TABLES_H__ */
