@@ -1,22 +1,24 @@
 # Compiles the C program
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -pedantic
-
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
 NAME = school
+CFLAGS = -Wall -Werror -Wextra -pedantic
+RM = rm -f
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(OBJ) -o $(NAME)
 
-%.o: %.c m.h
-	$(CC) $(CFLAGS) -c $< -o $@
+$(OBJ): $(SRC)
+	$(CC) $(CFLAGS) -c $^
 
 clean:
-	rm -f $(NAME) *.o *.a
+	$(RM) *~ $(NAME)
 
 oclean:
-	rm -f *.o
+	$(RM) $(OBJ)
 
 fclean: clean oclean
 
